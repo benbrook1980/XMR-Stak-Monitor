@@ -11,11 +11,14 @@ import {MinerCardHashrateComponent} from "./miner-card-hashrate/miner-card-hashr
 import {MinerCardResultsComponent} from "./miner-card-results/miner-card-results.component"
 import { MinerCardConnectionsComponent } from './miner-card-connections/miner-card-connections.component';
 import { MinerCardErrorComponent } from './miner-card-error/miner-card-error.component';
+import { LastSeenPipe } from './lastSeenPipe/lastSeen.pipe';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     TopNavigationComponent,
     SubNavigationComponent,
     LoaderComponent,
+    LastSeenPipe,
     MinerCardComponent,
     MinerCardHashrateComponent,
     MinerCardResultsComponent,
@@ -32,11 +35,15 @@ import { MinerCardErrorComponent } from './miner-card-error/miner-card-error.com
     TopNavigationComponent,
     LoaderComponent,
     SubNavigationComponent,
+    LastSeenPipe,
     MinerCardComponent,
     MinerCardHashrateComponent,
     MinerCardResultsComponent,
     MinerCardConnectionsComponent,
     MinerCardErrorComponent
+  ],
+  providers:[
+    DatePipe
   ]
 })
 export class SharedModule {}
